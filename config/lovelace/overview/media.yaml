@@ -1,0 +1,15 @@
+type: media-control
+entity: media_player.living_room
+card_mod:
+  style: |
+    ha-card {
+      --primary-color: RGB(0,0,0,0);
+      height: 315px !important;
+      margin: 1px !important;
+    }
+    .image {
+      width: 315px !important;
+    }
+    .color-gradient {
+      width: 315px !important;
+    }

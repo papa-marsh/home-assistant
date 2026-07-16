@@ -1,0 +1,11 @@
+type: glance
+show_name: false
+entities:
+  - entity: person.marshall
+  - entity: person.emily
+card_mod:
+  style: |
+    .no-header {
+      padding-top: 12px !important;  
+      padding-bottom: 2 !important;
+    }

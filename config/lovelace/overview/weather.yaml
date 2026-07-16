@@ -1,0 +1,12 @@
+show_current: true
+show_forecast: true
+type: weather-forecast
+entity: weather.pirate_weather
+name: East Grand Rapids
+forecast_type: daily
+secondary_info_attribute: apparent_temperature
+card_mod:
+  style: |
+    ha-card {
+      height: 205px !important;
+    }

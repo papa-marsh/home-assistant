@@ -1,0 +1,27 @@
+type: entities
+entities:
+  - entity: sensor.home_assistant_uptime
+    name: Last OS Restart
+  - entity: sensor.last_boot
+    name: Last Host Reboot
+  - entity: binary_sensor.remote_ui
+    name: Cloud Remote UI
+  - entity: sensor.backup_state
+    name: Cloud Backup
+  - entity: sensor.processor_use
+    name: Processor Use
+  - entity: sensor.disk_use_percent_home
+    name: Disk Use
+  - entity: sensor.memory_use_percent
+    name: Memory Use
+  - entity: sensor.swap_use
+    name: Swap Use
+  - entity: sensor.swap_free
+    name: Swap Free
+card_mod:
+  style:
+    "#states": |
+      div {
+        margin-top: -4px !important;
+        margin-bottom: -4px !important;
+      }

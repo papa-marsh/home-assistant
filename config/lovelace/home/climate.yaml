@@ -1,0 +1,15 @@
+type: horizontal-stack
+cards:
+  - type: thermostat
+    entity: climate.thermostat
+    features:
+      - type: climate-hvac-modes
+    name:
+      type: null
+  - type: thermostat
+    entity: climate.bathroom_floor_thermostat
+    features:
+      - style: icons
+        type: climate-hvac-modes
+    name:
+      type: null

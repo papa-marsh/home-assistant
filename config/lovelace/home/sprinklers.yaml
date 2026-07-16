@@ -1,0 +1,496 @@
+type: entities
+entities:
+  - type: custom:paper-buttons-row
+    buttons:
+      - name: |-
+          {% if is_state("input_boolean.sprinklers_running", "on") %}
+            Running
+          {% else %}
+            All
+          {% endif %}
+        style:
+          button:
+            width: 30%
+            justify-content: center
+            padding: 6px 24px
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("input_boolean.sprinklers_running", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 6px 4px 8px
+        tap_action:
+          action: call-service
+          service: script.fire_ui_event
+          service_data:
+            trigger: sprinklers_run_program
+      - name: |-
+          {% if is_state("input_boolean.sprinklers_skip_next", "on") %}
+            Skipped
+          {% else %}
+            Skip
+          {% endif %}
+        style:
+          button:
+            width: 30%
+            justify-content: center
+            padding: 6px 24px
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("input_boolean.sprinklers_skip_next", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 6px 4px 8px
+        tap_action:
+          action: call-service
+          service: script.fire_ui_event
+          service_data:
+            trigger: sprinklers_skip_next
+      - name: |-
+          {% if is_state("input_boolean.sprinklers_running", "on") %}
+            Stop
+          {% else %}
+            Stopped
+          {% endif %}
+        style:
+          button:
+            width: 30%
+            justify-content: center
+            padding: 6px 24px
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("input_boolean.sprinklers_running", "on") %}
+                var(--paper-card-background-color)
+              {% else %}
+                var(--custom-card-active-background-color)
+              {% endif %}
+            margin: 6px 4px 8px
+        tap_action:
+          action: call-service
+          service: script.fire_ui_event
+          service_data:
+            trigger: sprinklers_stop_all
+  - type: custom:paper-buttons-row
+    buttons:
+      - name: Front - East
+        style:
+          button:
+            width: 55%
+            justify-content: center
+            margin: 2px 4px 0
+      - icon: mdi:numeric-1-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_1", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_1
+            duration: 1
+      - icon: mdi:numeric-2-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_1", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_1
+            duration: 2
+      - icon: mdi:numeric-5-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_1", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_1
+            duration: 5
+      - icon: mdi:numeric-10-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_1", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_1
+            duration: 10
+  - type: custom:paper-buttons-row
+    buttons:
+      - name: Front - Middle
+        style:
+          button:
+            width: 55%
+            justify-content: center
+            margin: 2px 4px 0
+      - icon: mdi:numeric-1-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_2", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_2
+            duration: 1
+      - icon: mdi:numeric-2-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_2", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_2
+            duration: 2
+      - icon: mdi:numeric-5-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_2", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_2
+            duration: 5
+      - icon: mdi:numeric-10-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_2", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_2
+            duration: 10
+  - type: custom:paper-buttons-row
+    buttons:
+      - name: Front - West
+        style:
+          button:
+            width: 55%
+            justify-content: center
+            margin: 2px 4px 0
+      - icon: mdi:numeric-1-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_3", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_3
+            duration: 1
+      - icon: mdi:numeric-2-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_3", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_3
+            duration: 2
+      - icon: mdi:numeric-5-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_3", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_3
+            duration: 5
+      - icon: mdi:numeric-10-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_3", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_3
+            duration: 10
+  - type: custom:paper-buttons-row
+    buttons:
+      - name: Back - West
+        style:
+          button:
+            width: 55%
+            justify-content: center
+            margin: 2px 4px 0
+      - icon: mdi:numeric-1-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_4", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_4
+            duration: 1
+      - icon: mdi:numeric-2-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_4", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_4
+            duration: 2
+      - icon: mdi:numeric-5-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_4", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_4
+            duration: 5
+      - icon: mdi:numeric-10-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_4", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_4
+            duration: 10
+  - type: custom:paper-buttons-row
+    buttons:
+      - name: Back - East
+        style:
+          button:
+            width: 55%
+            justify-content: center
+            margin: 2px 4px 0
+      - icon: mdi:numeric-1-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_5", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_5
+            duration: 1
+      - icon: mdi:numeric-2-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_5", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_5
+            duration: 2
+      - icon: mdi:numeric-5-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_5", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_5
+            duration: 5
+      - icon: mdi:numeric-10-circle
+        style:
+          button:
+            width: 15%
+            justify-content: center
+            border-radius: var(--ha-card-border-radius)
+            background-color: |-
+              {% if is_state("switch.rain_bird_sprinkler_5", "on") %}
+                var(--custom-card-active-background-color)
+              {% else %}
+                var(--paper-card-background-color)
+              {% endif %}
+            margin: 2px 4px 0
+        tap_action:
+          action: call-service
+          service: rainbird.start_irrigation
+          service_data:
+            entity_id: switch.rain_bird_sprinkler_5
+            duration: 10

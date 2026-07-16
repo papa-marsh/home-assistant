@@ -1,0 +1,70 @@
+kiosk_mode: !include lovelace/cast-kiosk-mode.yaml
+sidebar: !include lovelace/cast-sidebar.yaml
+background: var(--background-image)
+views:
+  - theme: Backend-selected
+    title: Overview
+    icon: mdi:view-dashboard
+    path: overview
+    badges: []
+    cards:
+      - type: custom:mod-card
+        style: !include lovelace/style-cast-view.yaml
+        card:
+          type: horizontal-stack
+          cards:
+            - type: vertical-stack
+              cards:
+                - !include lovelace/overview/weather.yaml
+                - !include lovelace/overview/garage-buttons.yaml
+                - !include lovelace/overview/next-sports-game.yaml
+                - type: horizontal-stack
+                  cards:
+                    - !include lovelace/entity-cards/card-1.yaml
+                    - !include lovelace/entity-cards/card-2.yaml
+                    - !include lovelace/entity-cards/card-3.yaml
+            - type: vertical-stack
+              cards:
+                - !include lovelace/overview/people-simple.yaml
+                - !include lovelace/overview/media.yaml
+                - type: horizontal-stack
+                  cards:
+                    - !include lovelace/entity-cards/card-4.yaml
+                    - !include lovelace/entity-cards/card-5.yaml
+                    - !include lovelace/entity-cards/card-6.yaml
+  - theme: Backend-selected
+    title: Home
+    icon: mdi:home
+    path: home
+    badges: []
+    cards:
+      - type: custom:mod-card
+        style: !include lovelace/style-cast-view.yaml
+        card:
+          type: horizontal-stack
+          cards:
+            - type: vertical-stack
+              cards:
+                - !include lovelace/home/devices.yaml
+            - type: vertical-stack
+              cards:
+                - !include lovelace/home/climate.yaml
+                - !include lovelace/home/sprinklers.yaml
+  - theme: Backend-selected
+    title: System
+    icon: mdi:tools
+    path: system
+    badges: []
+    cards:
+      - type: custom:mod-card
+        style: !include lovelace/style-cast-view.yaml
+        card:
+          type: horizontal-stack
+          cards:
+            - type: vertical-stack
+              cards:
+                - !include lovelace/system/admin-buttons.yaml
+            - type: vertical-stack
+              cards:
+                - !include lovelace/system/gates.yaml
+                - !include lovelace/system/status.yaml

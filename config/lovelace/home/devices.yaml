@@ -1,0 +1,33 @@
+type: entities
+entities:
+  - entity: light.outside_lights
+    name: Outside Lights
+  - entity: switch.master_sound_machine
+    name: Master Sound Machine
+    icon: mdi:waveform
+  - entity: switch.olivias_sound_machine
+    name: Olivia's Sound Machine
+    icon: mdi:waveform
+  - entity: switch.ellies_sound_machine
+    icon: mdi:waveform
+    name: Ellie's Sound Machine
+  - entity: switch.butterfly_night_light
+    name: Butterfly Night Light
+    icon: mdi:butterfly
+  - entity: switch.space_heater
+    icon: mdi:radiator
+    name: Office Space Heater
+  - entity: switch.office_door_led
+    name: Office Door LEDs
+    icon: mdi:led-strip-variant
+  - entity: fan.office_purifier
+    icon: mdi:air-purifier
+title: Devices
+show_header_toggle: false
+state_color: true
+card_mod:
+  style:
+    .: |
+      ha-card {
+        height: 584px !important;
+      }
