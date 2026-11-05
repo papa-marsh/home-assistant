@@ -1,0 +1,76 @@
+# Top-level theme names must stay in sync with the Theme enum in maestro's
+# scripts/system/themes.py, which populates input_select.theme_selector.
+Default:
+  modes:
+    dark: {}
+
+  # Base colors
+  primary-color: "#ff9f09"
+  accent-color: rgba(255, 159, 9, 1)
+  light-primary-color: "#b6b6c1"
+  primary-text-color: "#ffffff"
+  secondary-text-color: "#d3d3d3"
+  disabled-text-color: "#555555"
+  text-primary-color: "#ffffff"
+  divider-color: rgba(152, 152, 157, 0.3)
+
+  # Backgrounds and cards
+  primary-background-color: "#2c2c2e"
+  secondary-background-color: rgba(25, 25, 25, 0.9)
+  app-header-background-color: rgba(30, 2, 61, 0.4)
+  lovelace-background: 'center / cover no-repeat fixed url("/local/backgrounds/homekit-bg-blue-red.jpg")'
+  card-background-color: rgba(34, 34, 36, 0.65)
+  rgb-card-background-color: "34, 34, 36"
+  ha-card-background: var(--card-background-color)
+  ha-card-border-radius: 20px
+  ha-card-border-width: 0
+  clear-background-color: var(--ha-card-background)
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+
+  # Sidebar
+  sidebar-background-color: var(--primary-background-color)
+  sidebar-icon-color: var(--light-primary-color)
+  sidebar-text-color: "#f1f1f1"
+  sidebar-selected-icon-color: "#ffffff"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+
+  # Icons and badges
+  state-icon-color: "#ffffff"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  label-badge-background-color: "#23232e"
+  label-badge-red: rgba(255, 159, 9, 0.7)
+  label-badge-text-color: "#f1f1f1"
+
+  # Editors and inputs
+  code-editor-background-color: "#161616"
+  codemirror-property: var(--accent-color)
+  markdown-code-background-color: "#464646"
+  input-disabled-fill-color: var(--primary-background-color)
+  input-disabled-ink-color: var(--disabled-text-color)
+  input-dropdown-icon-color: var(--primary-text-color)
+  input-fill-color: var(--primary-background-color)
+  input-hover-line-color: var(--secondary-text-color)
+  input-idle-line-color: var(--secondary-text-color)
+  input-ink-color: var(--primary-text-color)
+  input-label-ink-color: var(--primary-text-color)
+  mdc-select-fill-color: var(--input-fill-color)
+  mdc-theme-surface: var(--primary-background-color)
+
+  # Dashboard card templates
+  custom-card-active-background-color: "#666666"
+  custom-favorable-text-color: "#55ff55"
+  custom-warning-text-color: "#ff5555"
+
+  # Custom cards and HACS still consume these compatibility variables.
+  mini-media-player-base-color: "#ffffff"
+  mini-media-player-icon-color: "#ffffff"
+  sidebar-background: "#2a2a2a"
+  paper-card-background-color: var(--ha-card-background)
+  paper-item-icon-active-color: "#ffd60a"
+  paper-item-icon-color: "#ffffff"
+  paper-listbox-background-color: var(--primary-background-color)
+  state-icon-active-color: "#ffd60a"
+  switch-checked-button-color: "#ffffff"
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#30d158"
