@@ -1,0 +1,18 @@
+  - name: ha_entities
+    sidebar_title: Entities
+    sidebar_icon: mdi:format-list-text
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: 'config/entities'
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: core_configurator
+  - name: ha_integ
+    sidebar_title: Integrations
+    sidebar_icon: mdi:chip
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: 'config/integrations'
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: core_configurator
